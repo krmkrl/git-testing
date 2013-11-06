@@ -23,10 +23,12 @@ int main(int argc, char* argv[]) {
     pid = fork();
     if (pid == -1) {
         printf("Error forking process\n");
+        return 1;
     } else if (pid == 0) {
         //child
         execv(exec_args[0], exec_args);
         printf("Error, problem with execv\n");
+        return 1;
     } else {
         //parent
         wait(&status);
