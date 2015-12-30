@@ -26,7 +26,7 @@ int main(int argc, char* argv[]) {
         return 1;
     } else if (pid == 0) {
         //child
-        execv(exec_args[0], exec_args);
+        execvp(exec_args[0], exec_args);
         printf("Error, problem with execv\n");
         return 1;
     } else {
