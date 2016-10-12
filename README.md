@@ -1,4 +1,4 @@
 git-testing
 ===========
 
-Testing repo with git on github
+Testing repo with git on github.
